@@ -43,7 +43,7 @@ h1{
     background-color:#FEC834;
     border-color: #FEC834;
     border-radius:30px;
-    /*box-shadow: inset 0px 0px 0px 0px #dcecfb;*/
+    box-shadow: inset 0px 0px 0px 0px #dcecfb; /*despues comentar esta linea */
     width: 60%;
     height: 60%;
     display: flex;
