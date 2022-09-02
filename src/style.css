@@ -6,9 +6,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* *{
+*{
     outline: 1px solid blue !important;
-  } */
+}
 body {
     background-color: #69C5B8;
 }
@@ -66,6 +66,7 @@ h1{
     height: 10%;
 }
 .googleButton{
+    display: flex;
     border-radius: 30px;
     color:#4285F4;
     text-align: center;
