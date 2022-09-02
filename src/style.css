@@ -2,23 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 * {
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* *{
+*{
     outline: 1px solid blue !important;
-  } */
+  } 
 body {
     background-color: #69C5B8;
+    width: 100%;
 }
 .logo{
-    height: 100%;
-    width: 100%;
+  display: flex;
+  align-content: center;
+
+  
 }
 header{
     font-family: 'Josefin Slab', serif;
-    font-size: 16px;
+    font-size: 20px;
+    text-align: center;
     display:flex;
     flex-direction: column;
     color: #4d4f53;
@@ -33,10 +37,8 @@ h1{
     flex-direction:column;
     font-family: 'Josefin Slab', serif;
     color: #4d4f53;
-    justify-content: center;
-    justify-items: space-between;
-    align-items: center;
     padding: 2%;
+    justify-content: end;
 }
 
 .data{
@@ -44,12 +46,10 @@ h1{
     border-color: #FEC834;
     border-radius:30px;
     box-shadow: inset 0px 0px 0px 0px #dcecfb; /*despues comentar esta linea */
-    width: 60%;
-    height: 60%;
+    width: 94%;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    padding: 2%;
+    padding: 4%;
 }
 
 .loginButton{
@@ -58,7 +58,9 @@ h1{
     font-family: 'Josefin Slab', serif;
     color: #ffffff;
     border-radius: 30px;
-    width: 10%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
     
 }
 .googleLogo {
@@ -70,21 +72,24 @@ h1{
     color:#4285F4;
     text-align: center;
 }
-@media only screen and (min-width: 500px) {
-    .logo {
+/* @media only screen and (min-width: 400px) {
+     header,
+    .data{
+      width: 80%;
+      height: 80%;
+    }
+  } 
+  @media only screen and (min-width: 900px) {
+     header,
+    .data {
       width: 60%;
       height: 60%;
     }
   } 
-  @media only screen and (min-width: 700px) {
-    .logo {
+   @media only screen and (min-width: 1500px) {
+    header,
+    .data {
       width: 40%;
       height: 40%;
     }
-  } 
-   @media only screen and (min-width: 1200px) {
-    .logo {
-      width: 20%;
-      height: 20%;
-    }
-  } 
+  }  */
