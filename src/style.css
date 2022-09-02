@@ -6,9 +6,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-*{
+/* *{
     outline: 1px solid blue !important;
-  } 
+  }  */
 body {
     background-color: #69C5B8;
     width: 100%;
@@ -16,7 +16,6 @@ body {
 .logo{
   display: flex;
   align-content: center;
-
   
 }
 header{
@@ -36,9 +35,10 @@ h1{
     display: flex;
     flex-direction:column;
     font-family: 'Josefin Slab', serif;
+    font-size: 24px;
     color: #4d4f53;
     padding: 2%;
-    justify-content: end;
+    margin-top: 4%;
 }
 
 .data{
@@ -50,27 +50,51 @@ h1{
     display: flex;
     flex-direction: column;
     padding: 4%;
+    height: 20%;
+    align-self: center;
+}
+
+.input {
+  font-size: 20px;
+}
+.inputMail, .inputPassword {
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+}
+
+.linkCheckin {
+  margin: 2%;
+  margin-bottom: 4%;
+  align-self: center;
+  text-align: center;
 }
 
 .loginButton{
     background-color: #3EA1C1;
     border-color:#3EA1C1;
     font-family: 'Josefin Slab', serif;
+    font-size: 24px;
     color: #ffffff;
     border-radius: 30px;
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    
+    width: 60%;
+    align-self: center;
+    text-align: center;
+    margin: 2%;
+    padding: 3%;
 }
 .googleLogo {
-    width: 10%;
-    height: 10%;
+    width: 30%;
+   
+    flex-direction: row;
 }
 .googleButton{
+    font-size: 18px;
     border-radius: 30px;
     color:#4285F4;
     text-align: center;
+    align-self: center;
+    padding: 2%;
 }
 /* @media only screen and (min-width: 400px) {
      header,
