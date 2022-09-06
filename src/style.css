@@ -1,58 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Slab:ital,wght@1,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Slab:ital,wght@1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
 /* *{
     outline: 1px solid blue !important;
   }  */
 body {
-    background-color: #69C5B8;
-    width: 100%;
+  background-color: #69c5b8;
+  width: 100%;
 }
-.logo{
+.containerLogo {
   display: flex;
   align-content: center;
-  
 }
-header{
-    font-family: 'Josefin Slab', serif;
-    font-size: 20px;
-    text-align: center;
-    display:flex;
-    flex-direction: column;
-    color: #4d4f53;
+.containerLogo img {
+  width: 100%;
 }
-h1{
-    font-family: 'Abril Fatface', cursive;
+
+header {
+  font-family: "Josefin Slab", serif;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: #4d4f53;
 }
-.login{
-    display: flex;
-    flex-direction:column;
-    font-family: 'Josefin Slab', serif;
-    font-size: 24px;
-    color: #4d4f53;
-    padding: 2%;
-    margin-top: 4%;
+h1 {
+  font-family: "Abril Fatface", cursive;
 }
-.data{
-    background-color:#FEC834;
-    border-color: #FEC834;
-    border-radius:30px;
-    box-shadow: inset 0px 0px 0px 0px #dcecfb; /*despues comentar esta linea */
-    width: 94%;
-    display: flex;
-    flex-direction: column;
-    padding: 4%;
-    height: 20%;
-    align-self: center;
+.login {
+  display: flex;
+  flex-direction: column;
+  font-family: "Josefin Slab", serif;
+  font-size: 24px;
+  color: #4d4f53;
+  padding: 2%;
+  margin-top: 4%;
+}
+.data {
+  background-color: #fec834;
+  border-color: #fec834;
+  border-radius: 30px;
+  box-shadow: inset 0px 0px 0px 0px #dcecfb; /*despues comentar esta linea */
+  width: 94%;
+  display: flex;
+  flex-direction: column;
+  padding: 4%;
+  height: 20%;
+  align-self: center;
 }
 .input {
   font-size: 20px;
+  font-family: "Josefin Slab", serif;
+  padding: 1%;
+  border-radius: 10px;
 }
-.inputMail, .inputPassword {
+.inputMail,
+.inputPassword {
   display: flex;
   flex-direction: column;
   margin: 2%;
@@ -63,31 +70,36 @@ h1{
   align-self: center;
   text-align: center;
 }
-.loginButton{
-    background-color: #3EA1C1;
-    border-color:#3EA1C1;
-    font-family: 'Josefin Slab', serif;
-    font-size: 24px;
-    color: #ffffff;
-    border-radius: 30px;
-    width: 60%;
-    align-self: center;
-    text-align: center;
-    margin: 2%;
-    padding: 3%;
+.loginButton {
+  background-color: #3ea1c1;
+  border-color: #3ea1c1;
+  font-family: "Josefin Slab", serif;
+  font-size: 24px;
+  color: #ffffff;
+  border-radius: 30px;
+  width: 60%;
+  align-self: center;
+  text-align: center;
+  margin: 2%;
+  padding: 3%;
+  cursor: pointer;
 }
 .googleLogo {
-    width: 30%;
-   
-    flex-direction: row;
+  width: 30%;
+  flex-direction: row;
 }
-.googleButton{
-    font-size: 18px;
-    border-radius: 30px;
-    color:#4285F4;
-    text-align: center;
-    align-self: center;
-    padding: 2%;
+.googleButton {
+  display: flex;
+  font-size: 18px;
+  border-radius: 30px;
+  color: #4285f4;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-self: center;
+  padding: 2%;
+  cursor: pointer;
+  background-color: #ffffffaf;
 }
 /* @media only screen and (min-width: 400px) {
      header,
@@ -95,18 +107,58 @@ h1{
       width: 80%;
       height: 80%;
     }
-  } 
-  @media only screen and (min-width: 900px) {
-     header,
-    .data {
-      width: 60%;
-      height: 60%;
-    }
-  } 
-   @media only screen and (min-width: 1500px) {
-    header,
-    .data {
-      width: 40%;
-      height: 40%;
-    }
   }  */
+@media only screen and (min-width: 900px) {
+  header {
+    width: 50%;
+    /* height: 100%; */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: row; */
+  }
+  .data {
+    width: 100%;
+    height: 100%;
+  }
+  .logo {
+    width: 100%;
+    height: 100%;
+  }
+  .containerLogo {
+    width: 70%;
+  }
+  .welcome {
+    width: 60%;
+    font-size: 30px;
+  }
+  .loginView{
+    display: flex;
+    flex-direction: row;
+  }
+  .login{
+    width: 50%;
+  }
+  .input {
+    font-size: 20px;
+    padding: 1%;
+    border-radius: 10px;
+    font-family: "Josefin Slab", serif;
+  }
+  .inputMail,
+  .inputPassword {
+    display: flex;
+    flex-direction: column;
+    margin: 3%;
+    font-size: 20px;
+  }
+  .loginButton{
+    padding: 1%;
+  }
+  .googleButton{
+    padding: 1%;
+    width: 25%;
+    margin: 2%;
+  }
+}
