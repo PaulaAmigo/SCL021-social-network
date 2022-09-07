@@ -1,5 +1,5 @@
 export const login = () => {
-  const container = document.createElement("div");
+  const container = document.createElement('div');
   const html = `
   <div class= "loginView" >
   <header>
@@ -33,8 +33,14 @@ export const login = () => {
  
 </main>
 
-  </div> `;
-
+  </div> 
+  <hr>
+  <footer>
+  <p> © 2022</p>
+  <a href="https://github.com/AshleyBustosE"> Ashley Bustos </a>
+  <a href="https://github.com/PaulaAmigo"> Paula Amigo </a>
+  <a href="https://github.com/DanielaRamirezCanquiz"> Daniela Ramírez </a>
+  </footer> `;
   container.innerHTML = html;
   return container;
 };
