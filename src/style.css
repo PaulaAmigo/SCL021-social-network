@@ -26,7 +26,7 @@ header {
   text-align: center;
   display: flex;
   flex-direction: column;
-  color: #4d4f53;
+  color: #313233;
 }
 h1 {
   font-family: "Abril Fatface", cursive;
@@ -101,22 +101,22 @@ h1 {
   cursor: pointer;
   background-color: #ffffffaf;
 }
-/* @media only screen and (min-width: 400px) {
-     header,
-    .data{
-      width: 80%;
-      height: 80%;
-    }
-  }  */
+footer{
+  width: 98%;
+  display:flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #4d4f53;
+  font-family: "Josefin Slab", serif;
+  margin-top: 1%;        
+}
 @media only screen and (min-width: 900px) {
   header {
     width: 50%;
-    /* height: 100%; */
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    /* flex-direction: row; */
   }
   .data {
     width: 100%;
@@ -141,9 +141,10 @@ h1 {
     width: 50%;
   }
   .input {
-    font-size: 20px;
+    font-size: 25px;
     padding: 1%;
     border-radius: 10px;
+    border:none;
     font-family: "Josefin Slab", serif;
   }
   .inputMail,
@@ -151,7 +152,7 @@ h1 {
     display: flex;
     flex-direction: column;
     margin: 3%;
-    font-size: 20px;
+    font-size: 25px;
   }
   .loginButton{
     padding: 1%;
@@ -160,5 +161,15 @@ h1 {
     padding: 1%;
     width: 25%;
     margin: 2%;
+    border:none;
+  }
+  footer{
+    display:flex;
+    justify-content: space-around;
+    font-size: 14px;
+    color: #4d4f53;
+    font-family: "Josefin Slab", serif;
+    margin-top: 1%;        
+    
   }
 }
