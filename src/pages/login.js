@@ -1,5 +1,5 @@
 export const login = () => {
-  const container = document.createElement('div');
+  const container = document.createElement("div");
   const html = `
   <div class= "loginView" >
   <header>
@@ -21,7 +21,10 @@ export const login = () => {
     <div class="inputPassword">
      <h3>Contraseña</h3>
      <input type="password" class="input" placeholder="Contraseña"></input>
-     <h4>¿Olvidaste tu contraseña?</h4>
+     
+    </div>
+    <div class="getPassword">
+    <h4><u>¿Olvidaste tu contraseña?</u></h4>
     </div>
      <button type="button" class="loginButton">Iniciar Sesión</button>
            <div class="linkCheckin">
