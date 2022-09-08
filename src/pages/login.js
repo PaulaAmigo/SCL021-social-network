@@ -24,7 +24,7 @@ export const login = () => {
      <h4>¿Olvidaste tu contraseña?</h4>
     </div>
      <button type="button" class="loginButton">Iniciar Sesión</button>
-           <div class="linkCheckin">
+    <div class="linkCheckin">
      <h3>Regístrate aquí</h3>
      <h3>o</h3>
     </div>
