@@ -64,9 +64,14 @@ h1 {
   flex-direction: column;
   margin: 2%;
 }
+.getPassword {
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+}
 .linkCheckin {
-  margin: 2%;
-  margin-bottom: 4%;
+  margin: 1%;
+  margin-bottom: 1%;
   align-self: center;
   text-align: center;
 }
@@ -154,6 +159,11 @@ footer{
     margin: 3%;
     font-size: 25px;
   }
+  .getPassword {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+  }
   .loginButton{
     padding: 1%;
   }
@@ -169,7 +179,7 @@ footer{
     font-size: 14px;
     color: #4d4f53;
     font-family: "Josefin Slab", serif;
-    margin-top: 1%;        
-    
+    margin-top: 1%;          
   }
+  
 }
