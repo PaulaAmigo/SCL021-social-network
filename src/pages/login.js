@@ -1,3 +1,5 @@
+import { redirectGoogle, loginWithGoogle } from '../firebase.js';
+
 export const login = () => {
   const container = document.createElement('div');
   const html = `
@@ -52,7 +54,7 @@ export const login = () => {
 
   // LOGIN WITH GOOGLE
   const btnGoogle = container.querySelector('.googleButton');
-  btnGoogle.addEventListener('click');
-  // console.log(btnGoogle);
+  btnGoogle.addEventListener('click', redirectGoogle());
+  //console.log(btnGoogle);
   return container;
 };
