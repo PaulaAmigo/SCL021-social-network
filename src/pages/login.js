@@ -1,5 +1,5 @@
 export const login = () => {
-  const container = document.createElement("div");
+  const container = document.createElement('div');
   const html = `
   <div class= "loginView" >
   <header>
@@ -27,7 +27,7 @@ export const login = () => {
     <h4><u>¿Olvidaste tu contraseña?</u></h4>
     </div>
      <button type="button" class="loginButton">Iniciar Sesión</button>
-           <div class="linkCheckin">
+    <div class="linkCheckin">
      <h3>Regístrate aquí</h3>
      <h3>o</h3>
     </div>
@@ -45,5 +45,14 @@ export const login = () => {
   <a href="https://github.com/DanielaRamirezCanquiz"> Daniela Ramírez </a>
   </footer> `;
   container.innerHTML = html;
+
+  // LOGIN WITH EMAIL AND PASSWORD
+  // const btnLogin = container.querySelector('.loginButton');
+  // console.log(btnLogin);
+
+  // LOGIN WITH GOOGLE
+  const btnGoogle = container.querySelector('.googleButton');
+  btnGoogle.addEventListener('click');
+  // console.log(btnGoogle);
   return container;
 };

@@ -1,23 +1,54 @@
+/* eslint-disable import/no-unresolved */
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-firestore.js";
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js';
+import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase-firestore.js';
+import { getAuth, GoogleAuthProvider, signInWithRedirect, getRedirectResult } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase-auth.js';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCcmRcn_Cf0UNCMSgEPO0IwaraE8bQEg5U",
-  authDomain: "true-lache.firebaseapp.com",
-  projectId: "true-lache",
-  storageBucket: "true-lache.appspot.com",
-  messagingSenderId: "153553252472",
-  appId: "1:153553252472:web:7a3d9d2f61702f73083d8d",
-  measurementId: "G-EPCZ497K2S",
+  apiKey: 'AIzaSyCcmRcn_Cf0UNCMSgEPO0IwaraE8bQEg5U',
+  authDomain: 'true-lache.firebaseapp.com',
+  projectId: 'true-lache',
+  storageBucket: 'true-lache.appspot.com',
+  messagingSenderId: '153553252472',
+  appId: '1:153553252472:web:7a3d9d2f61702f73083d8d',
+  measurementId: 'G-EPCZ497K2S',
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+//const auth = getAuth(app);
+export const db = getFirestore(app);
+// export default { db, auth };
 
-export default db;
+// Autentificar mediante Google
+const redirectGoogle = () => {
+  const provider = new GoogleAuthProvider();
+  const auth = getAuth();
+  signInWithRedirect(auth, provider);
+}
+
+export const loginWithGoogle = () => {
+  const auth = getAuth();
+  getRedirectResult(auth)
+  .then((result) => {
+    // This gives you a Google Access Token. You can use it to access Google APIs.
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+
+    // The signed-in user info.
+    const user = result.user;
+  }).catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // The email of the user's account used.
+    const email = error.customData.email;
+    // The AuthCredential type that was used.
+    const credential = GoogleAuthProvider.credentialFromError(error);
+    // ...
+  });
+}
