@@ -54,7 +54,8 @@ export const login = () => {
 
   // LOGIN WITH GOOGLE
   const btnGoogle = container.querySelector('.googleButton');
-  btnGoogle.addEventListener('click', redirectGoogle());
-  //console.log(btnGoogle);
+  btnGoogle.addEventListener('click', redirectGoogle);
+  // console.log(btnGoogle);
+
   return container;
 };

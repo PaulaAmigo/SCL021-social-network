@@ -29,7 +29,7 @@ export const redirectGoogle = () => {
   const provider = new GoogleAuthProvider();
   const auth = getAuth();
   signInWithRedirect(auth, provider);
-}
+};
 
 export const loginWithGoogle = () => {
   const auth = getAuth();
@@ -51,6 +51,6 @@ export const loginWithGoogle = () => {
     const credential = GoogleAuthProvider.credentialFromError(error);
     // ...
   });
-}
+};
 
 //Sign Out Google
