@@ -9,6 +9,7 @@ import {
   getRedirectResult,
   signOut,
 } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-auth.js";
+import { onNavigate } from "./lib/router.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -31,19 +32,14 @@ export const db = getFirestore(app);
 // export default { db, auth };
 
 // Autentificar mediante Google
-export const redirectGoogle = () => {
-  const provider = new GoogleAuthProvider();
-  const auth = getAuth();
-  signInWithRedirect(auth, provider);
-};
-
-export const loginWithGoogle = () => {
+const loginWithGoogle = () => {
   const auth = getAuth();
   getRedirectResult(auth)
     .then((result) => {
       // This gives you a Google Access Token. You can use it to access Google APIs.
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
+      onNavigate("/post");
 
       // The signed-in user info.
       const user = result.user;
@@ -58,6 +54,13 @@ export const loginWithGoogle = () => {
       const credential = GoogleAuthProvider.credentialFromError(error);
       // ...
     });
+};
+
+export const redirectGoogle = () => {
+  const provider = new GoogleAuthProvider();
+  const auth = getAuth();
+  signInWithRedirect(auth, provider);
+  loginWithGoogle();
 };
 
 //Sign Out Google
