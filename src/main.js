@@ -2,11 +2,15 @@
 
 //import { myFunction } from './lib/index.js';
 
-import { routes } from './lib/router.js';
+import { routes, onNavigate } from './lib/router.js';
 
-const rootDiv = document.getElementById('root');
-rootDiv.innerHTML = routes[window.location.pathname];
+export const rootDiv = document.getElementById('root');
+rootDiv.appendChild(routes[window.location.pathname]);
 console.log(rootDiv);
+
+window.onpopstate = () => {
+    rootDiv.innerHTML = routes[window.location.pathname]
+  }
 
 //document.getElementById('root').appendChild(login());
 //myFunction();
