@@ -1,4 +1,4 @@
-import { redirectGoogle, loginWithGoogle } from '../firebase.js';
+import { redirectGoogle } from '../firebase.js';
 
 export const login = () => {
   const container = document.createElement('div');
