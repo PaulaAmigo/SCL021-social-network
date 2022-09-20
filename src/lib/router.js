@@ -7,14 +7,14 @@ export const routes = {
 };
 
 export const onNavigate = (pathname) => {
-  window.history.pushState(
-    {},
-    pathname,
-    window.location.origin + pathname
-  )
-  rootDiv.innerHTML = routes[pathname];
-}
-
+    window.history.pushState(
+      {},
+      pathname,
+      window.location.origin + pathname
+    )
+    rootDiv.innerHTML = routes[pathname];
+  }
+  
 // export const routes = {
 //     login: {
 //         path: '/',

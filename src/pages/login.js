@@ -56,7 +56,7 @@ export const login = () => {
   const btnGoogle = container.querySelector('.googleButton');
   btnGoogle.addEventListener('click', () => {
     loginWithGoogle();
-  //console.log(btnGoogle);
-});
+     //console.log(btnGoogle);
+  });
   return container;
 };
