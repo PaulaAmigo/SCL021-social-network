@@ -21,13 +21,13 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-//const auth = getAuth(app);
 export const db = getFirestore(app);
 // export default { db, auth };
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
 
-// Autentificar mediante Google
-const loginWithGoogle = () => {
-  const auth = getAuth();
+export const loginWithGoogle = () => {
+  signInWithRedirect(auth, provider);
   getRedirectResult(auth)
   .then((result) => {
     // This gives you a Google Access Token. You can use it to access Google APIs.
@@ -42,20 +42,11 @@ const loginWithGoogle = () => {
     const errorCode = error.code;
     const errorMessage = error.message;
     // The email of the user's account used.
-    //const email = error.customData.email;
+    const email = error.customData.email;
     // The AuthCredential type that was used.
     const credential = GoogleAuthProvider.credentialFromError(error);
     // ...
   });
 };
-
-export const redirectGoogle = () => {
-  const provider = new GoogleAuthProvider();
-  const auth = getAuth();
-  signInWithRedirect(auth, provider);
-  loginWithGoogle();
-};
-
-
 
 //Sign Out Google
