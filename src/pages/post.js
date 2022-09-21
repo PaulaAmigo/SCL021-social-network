@@ -1,3 +1,5 @@
+import { signOutGoogle } from "../firebase.js";
+
 export const post = () => {
   const container = document.createElement('div');
   const html = `
@@ -6,10 +8,21 @@ export const post = () => {
 <div class="containerLogo">
 <img class="logo" src="./img/logo-sin-fondo.png" alt="logo" />
 </div>
-<div class="welcome">
-<h2>Te damos la bienvenida a</h2>
 <h1>TRUELACHE</h1> 
-<hr>`;
+<div class = "post"> 
+<input type="text" class= "inputPost" placeholder = "Escribe aquí tu..."></input>
+<button type="button" class= "buttonPost"><img class="imgBtnPost" src="./img/send1.jpg"/></button>
+</div> 
+<button type="button" class="buttonSignOff">Cerrar Sesión</button>`;
   container.innerHTML = html;
+  
+  const btnSignOff = container.querySelector('.buttonSignOff');
+  btnSignOff.addEventListener('click', () =>{
+    signOutGoogle();
+     //console.log(signOutGoogle);
+     
+  });
   return container;
 };
+
+

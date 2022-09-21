@@ -3,7 +3,9 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js';
 import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase-firestore.js';
 import { getAuth, GoogleAuthProvider, signInWithRedirect, getRedirectResult, signOut } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase-auth.js';
-import { onNavigate } from './lib/router.js';
+import { onNavigate } from './main.js';
+import { post } from './pages/post.js';
+import { login } from './pages/login.js';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -35,7 +37,6 @@ export const loginWithGoogle = () => {
     const credential = GoogleAuthProvider.credentialFromResult(result);
     const token = credential.accessToken;
     onNavigate('/post');
-
     // The signed-in user info.
     const user = result.user;
   }).catch((error) => {
@@ -52,3 +53,13 @@ export const loginWithGoogle = () => {
 };
 
 //Sign Out Google
+export const signOutGoogle = () => {
+    signOut(auth).then(() => {
+    onNavigate('/');
+  // Sign-out successful.
+}).catch((error) => {
+  // An error happened.
+  console.log(error.message);
+}); 
+
+}

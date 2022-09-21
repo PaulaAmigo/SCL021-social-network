@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} 
+}
 /* *{
     outline: 1px solid blue !important;
   }  */
@@ -113,7 +113,7 @@ footer{
   font-size: 14px;
   color: #4d4f53;
   font-family: "Josefin Slab", serif;
-  margin-top: 1%;        
+  margin-top: 1%;
 }
 @media only screen and (min-width: 900px) {
   header {
@@ -179,7 +179,42 @@ footer{
     font-size: 14px;
     color: #4d4f53;
     font-family: "Josefin Slab", serif;
-    margin-top: 1%;          
+    margin-top: 1%;
   }
+
+}
+
+.post{
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  height: 300%;
+  background: #FEC834;
+  border: 1px solid #000000;
+  border-radius: 30px;
+
+
+}
+.inputPost{
+box-sizing: border-box;
+width: 70%;
+height: 70%;
+background: #FDFAFA;
+border: 1px solid #000000;
+border-radius: 5px;
+
   
+}
+.buttonPost{
+width: 10%;
+height: 10%;
+background: #3EA1C1;
+border-radius: 50%;
+
+
+}
+.imgBtnPost{
+  width: 50%;
+  height:  50%;
+
 }
