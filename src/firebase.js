@@ -4,33 +4,32 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase
 import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase-firestore.js';
 import { getAuth, GoogleAuthProvider, signInWithRedirect, getRedirectResult, signOut } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase-auth.js';
 import { onNavigate } from './main.js';
-import { post } from './pages/post.js';
-import { login } from './pages/login.js';
+// import { post } from './pages/post.js';
+// import { login } from './pages/login.js';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: 'AIzaSyCcmRcn_Cf0UNCMSgEPO0IwaraE8bQEg5U',
-  authDomain: 'true-lache.firebaseapp.com',
-  projectId: 'true-lache',
-  storageBucket: 'true-lache.appspot.com',
-  messagingSenderId: '153553252472',
-  appId: '1:153553252472:web:7a3d9d2f61702f73083d8d',
-  measurementId: 'G-EPCZ497K2S',
+  apiKey: "AIzaSyCcmRcn_Cf0UNCMSgEPO0IwaraE8bQEg5U",
+  authDomain: "true-lache.firebaseapp.com",
+  projectId: "true-lache",
+  storageBucket: "true-lache.appspot.com",
+  messagingSenderId: "153553252472",
+  appId: "1:153553252472:web:7a3d9d2f61702f73083d8d",
+  measurementId: "G-EPCZ497K2S",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-//const auth = getAuth(app);
 export const db = getFirestore(app);
 // export default { db, auth };
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
 export const loginWithGoogle = () => {
-  signInWithRedirect(auth,provider);
+  signInWithRedirect(auth, provider);
   getRedirectResult(auth)
   .then((result) => {
     // This gives you a Google Access Token. You can use it to access Google APIs.
@@ -50,8 +49,6 @@ export const loginWithGoogle = () => {
     // ...
   });
 
-};
-
 //Sign Out Google
 export const signOutGoogle = () => {
     signOut(auth).then(() => {
@@ -59,7 +56,7 @@ export const signOutGoogle = () => {
   // Sign-out successful.
 }).catch((error) => {
   // An error happened.
-  console.log(error.message);
-}); 
+  // console.log(error.message);
+});
 
-}
+};

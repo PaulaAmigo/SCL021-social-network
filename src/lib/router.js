@@ -1,5 +1,5 @@
-import { login } from '../pages/login.js';
-import { post } from '../pages/post.js';
+import { login } from "../pages/login.js";
+import { post } from "../pages/post.js";
 
 // const rootDiv = document.getElementById('root');
 export const routes = {
@@ -20,12 +20,10 @@ export const routes = {
 // export const routes = {
 //     login: {
 //         path: '/',
-//         pages: login(), 
+//         pages: login(),
 //     },
 //     post: {
 //         path: '/post',
 //         pages: post(),
 //     }
 // };
-
-
