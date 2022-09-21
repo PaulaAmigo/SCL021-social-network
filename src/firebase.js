@@ -27,7 +27,7 @@ const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
 export const loginWithGoogle = () => {
-  signInWithRedirect(auth,provider);
+  signInWithRedirect(auth, provider);
   getRedirectResult(auth)
   .then((result) => {
     // This gives you a Google Access Token. You can use it to access Google APIs.
@@ -51,3 +51,11 @@ export const loginWithGoogle = () => {
 };
 
 //Sign Out Google
+export const signOutGoogle = () => {
+  signOut(auth).then(() => {
+    // Sign-out successful.
+  }).catch((error) => {
+    // An error happened.
+  });
+};
+
