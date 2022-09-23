@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js';
-import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase-firestore.js';
+import { getFirestore, collection, addDoc } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase-firestore.js';
 import { getAuth, GoogleAuthProvider, signInWithRedirect, getRedirectResult, signOut } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase-auth.js';
 import { onNavigate } from './main.js';
 // import { post } from './pages/post.js';
@@ -48,7 +48,6 @@ export const loginWithGoogle = () => {
     const credential = GoogleAuthProvider.credentialFromError(error);
     // ...
   });
-
 };
 
 //Sign Out Google
@@ -62,3 +61,6 @@ export const signOutGoogle = () => {
 });
 
 };
+
+//Ver post en la nube
+
