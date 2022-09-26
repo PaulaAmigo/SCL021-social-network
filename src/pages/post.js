@@ -32,7 +32,7 @@ export const post = () => {
   const btnSignOff = container.querySelector(".buttonSignOff");
   btnSignOff.addEventListener("click", () => {
     signOutGoogle();
-    //console.log(signOutGoogle);
+    console.log(signOutGoogle);
 
   function saved(){
     db.collection("usuarios").addDoc({
