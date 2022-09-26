@@ -1,6 +1,4 @@
-import { signOutGoogle } from "../firebase.js";
-import { collection, addDoc } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase-firestore.js';
-import { db } from '../firebase.js';
+import { signOutGoogle, getPost } from "../firebase.js";
 
 export const post = () => {
   const container = document.createElement('div');
@@ -33,27 +31,23 @@ export const post = () => {
   btnSignOff.addEventListener('click', () => {
     signOutGoogle();
     //console.log(signOutGoogle);
+  });
+  // function saved(){
+  //   db.collection("usuarios").addDoc({
+  //     nombre: container.querySelector(".name").value,
+  //     post: container.querySelector(".inputPost").value,
+  //     number: container.querySelector(".number").value, 
+  //   })
+  //   .then((docRef) => {
+  //     alert("registro exitoso")
+  //   })
+  //   .catch((error) => {
+  //     alert("Error en el registro")
+  //   });
 
-  function saved(){
-    db.collection("usuarios").addDoc({
-      nombre: container.querySelector(".name").value,
-      post: container.querySelector(".inputPost").value,
-      number: container.querySelector(".number").value, 
-    })
-    .then((docRef) => {
-      alert("registro exitoso")
-    })
-    .catch((error) => {
-      alert("Error en el registro")
-    });
-  }
-  const btnSend = container.querySelector(".buttonPost");
-  btnSend.addEventListener("click", () => {
-    saved();
-  })
-
+  const btnSend = container.querySelector('.buttonPost');
+  btnSend.addEventListener('click', () => {
+    getPost();
   });
   return container;
 };
-
-
