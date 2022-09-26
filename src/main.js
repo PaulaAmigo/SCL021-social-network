@@ -4,7 +4,7 @@
 
 import { routes } from "./lib/router.js";
 
-const rootDiv = document.getElementById("root");
+const rootDiv = document.getElementById('root');
 rootDiv.appendChild(routes[window.location.pathname]);
 console.log(rootDiv);
 

@@ -1,7 +1,7 @@
-import { loginWithGoogle } from "../firebase.js";
+import { loginWithGoogle } from '../firebase.js';
 
 export const login = () => {
-  const container = document.createElement("div");
+  const container = document.createElement('div');
   const html = `
   <div class= "loginView" >
   <header>
@@ -53,8 +53,8 @@ export const login = () => {
   // console.log(btnLogin);
 
   // LOGIN WITH GOOGLE
-  const btnGoogle = container.querySelector(".googleButton");
-  btnGoogle.addEventListener("click", () => {
+  const btnGoogle = container.querySelector('.googleButton');
+  btnGoogle.addEventListener('click', () => {
     loginWithGoogle();
     // console.log(btnGoogle);
   });

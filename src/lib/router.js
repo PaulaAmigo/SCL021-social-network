@@ -4,8 +4,8 @@ import { post } from "../pages/post.js";
 // const rootDiv = document.getElementById('root');
 export const routes = {
 
-    '/': login(),
-    '/post': post(),
+  '/': login(),
+  '/post': post(),
 };
 
 // export const onNavigate = (pathname) => {
