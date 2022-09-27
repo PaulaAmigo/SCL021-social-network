@@ -30,20 +30,6 @@ export const post = () => {
   const btnSignOff = container.querySelector('.buttonSignOff');
   btnSignOff.addEventListener('click', () => {
     signOutGoogle();
-    //console.log(signOutGoogle);
-  });
-  // function saved(){
-  //   db.collection("usuarios").addDoc({
-  //     nombre: container.querySelector(".name").value,
-  //     post: container.querySelector(".inputPost").value,
-  //     number: container.querySelector(".number").value, 
-  //   })
-  //   .then((docRef) => {
-  //     alert("registro exitoso")
-  //   })
-  //   .catch((error) => {
-  //     alert("Error en el registro")
-  //   });
 
   const btnSend = container.querySelector('.buttonPost');
   btnSend.addEventListener('click', () => {
