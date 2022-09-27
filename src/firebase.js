@@ -69,10 +69,10 @@ export const getPost = async () => {
   querySnapshot.forEach((doc) => {
     console.log(`${doc.id} => ${doc.data()}`);
   });
-};
+}
 
 // Ver en el muro los post de la nube
-const getCollection = () => {
+const getCollection = (tareaFinal) => {
   const consulta = query(collection (db, "usuarios"));
   const unsubcribe = onSnapshot (consulta, (resultadosConsulta) => {
     const misPosts = [];
@@ -81,23 +81,15 @@ const getCollection = () => {
       console.log({data: doc.data()})
       misPosts.push(doc.data());
      });
+     tareaFinal(misPosts)
   });
 }
+const root = document.getElementById("root")
 
-getCollection()
-
-// Ver en la nube lo que posteamos
-// export const addPost = async () => {
-//   try {
-//     const docRef = await addDoc(collection(db, "usuarios"), {
-//       nombre: nombre,
-
-//       // nombre: post.container.querySelector(".name").value,
-//       // post: post.container.querySelector(".inputPost").value,
-//       // number: post.container.querySelector(".number").value,
-//     });
-//     console.log("Document written with ID: ", docRef.id);
-// } catch (e) {
-//     console.error("Error adding document: ", e);
-// };
-// };
+getCollection((postsObtenidos) => {
+  postsObtenidos.forEach((unPost) => {
+     let paragragh = document.createElement("p")
+     paragragh.inertHTML = `<span>${unPost.texto}</span>`
+     root.appendChild(paragragh)
+});
+});

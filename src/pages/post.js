@@ -36,5 +36,8 @@ export const post = () => {
     getPost();
     //addPost();
   });
+  
+ 
+  });
   return container;
 };
