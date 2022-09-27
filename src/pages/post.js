@@ -34,6 +34,7 @@ export const post = () => {
   const btnSend = container.querySelector('.buttonPost');
   btnSend.addEventListener('click', () => {
     getPost();
+    //addPost();
   });
   return container;
 };
