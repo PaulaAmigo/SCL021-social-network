@@ -1,4 +1,4 @@
-import { signOutGoogle, getPost } from "../firebase.js";
+import { signOutGoogle, getPost, addPost } from "../firebase.js";
 
 export const post = () => {
   const container = document.createElement('div');
@@ -30,14 +30,14 @@ export const post = () => {
   const btnSignOff = container.querySelector('.buttonSignOff');
   btnSignOff.addEventListener('click', () => {
     signOutGoogle();
+  });  
 
   const btnSend = container.querySelector('.buttonPost');
   btnSend.addEventListener('click', () => {
     getPost();
-    //addPost();
+    addPost();
+    console.log("hola debería funcionar");
   });
   
- 
-  });
   return container;
 };

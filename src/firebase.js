@@ -62,17 +62,27 @@ export const signOutGoogle = () => {
 
 };
 
+export const addPost = async () => {
+  const post = document.getElementById("inputPost").value;
+  const docRef = await addDoc(collection(db, "post"), {
+    name: "nameUser",
+    title: post,
+    id: "Japan"
+  });
+//console.log("Document written with ID: ", docRef.id); 
+}; 
+
 //Ver en consola los post de la nube 
 export const getPost = async () => {
   //const post = [];
-  const querySnapshot = await getDocs(collection(db, 'usuarios'));
+  const querySnapshot = await getDocs(collection(db, 'post'));
   querySnapshot.forEach((doc) => {
     console.log(`${doc.id} => ${doc.data()}`);
   });
-}
+};
 
 // Ver en el muro los post de la nube
-const getCollection = (tareaFinal) => {
+/*const getCollection = (tareaFinal) => {
   const consulta = query(collection (db, "usuarios"));
   const unsubcribe = onSnapshot (consulta, (resultadosConsulta) => {
     const misPosts = [];
@@ -92,4 +102,4 @@ getCollection((postsObtenidos) => {
      paragragh.inertHTML = `<span>${unPost.texto}</span>`
      root.appendChild(paragragh)
 });
-});
+}); */
