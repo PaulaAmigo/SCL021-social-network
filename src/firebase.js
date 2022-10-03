@@ -61,16 +61,16 @@ export const signOutGoogle = () => {
 });
 
 };
-
 export const addPost = async () => {
   const post = document.getElementById("inputPost").value;
+  const nameUser = document.getElementById("name").value;
+  const numberUser = document.getElementById("number").value;
   const docRef = await addDoc(collection(db, "post"), {
-    name: "nameUser",
+    name: nameUser,
     title: post,
-    id: "Japan"
+    id: numberUser,
   });
-//console.log("Document written with ID: ", docRef.id); 
-}; 
+};
 
 //Ver en consola los post de la nube 
 export const getPost = async () => {
