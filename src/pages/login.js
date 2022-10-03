@@ -39,7 +39,6 @@ export const login = () => {
 </main>
 
   </div> 
-  <hr>
   <footer>
   <p> © Copyreit 2022</p>
   <a href="https://github.com/AshleyBustosE">Ashley Bustos</a>

@@ -68,18 +68,41 @@ export const addPost = async () => {
   const docRef = await addDoc(collection(db, "post"), {
     name: nameUser,
     title: post,
-    id: numberUser,
+    number: numberUser,
   });
+  //console.log("Document written with ID: ", docRef.id);
 };
 
+
 //Ver en consola los post de la nube 
-export const getPost = async () => {
-  //const post = [];
-  const querySnapshot = await getDocs(collection(db, 'post'));
+// finalPost corresponde a tareaFinal
+export const getPost = async (finalPost) => {
+  // const posts = [];
+  // const postDiv = document.getElementById('printPost');
+  const querySnapshot = await getDocs(query(collection(db, 'post')));
   querySnapshot.forEach((doc) => {
-    console.log(`${doc.id} => ${doc.data()}`);
-  });
+    //const posts = doc.data();
+    //console.log(doc.id, " => ", doc.data());
+    finalPost(doc.data());
+  //   posts.push({
+  //     id: doc.id, 
+  //     ...doc.data()
+  //   });
+  // });
+  // return posts; 
+});
 };
+
+/*const printPost = async () => {
+  const posts = await getPost();
+
+  const wallPost = document.getElementById("wall");
+  wallPost.appendChild(posts);
+};
+printPost(); */
+
+
+
 
 // Ver en el muro los post de la nube
 /*const getCollection = (tareaFinal) => {

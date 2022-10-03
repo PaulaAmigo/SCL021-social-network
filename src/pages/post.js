@@ -19,15 +19,22 @@ export const post = () => {
       <button type="button" class="buttonPost"><img class="imgBtnPost" src="./img/send.png"></button>
      </div>
 </div> 
-<div class = "printPost"> 
-<textarea class="container" id="printPost" rows="4" cols="20" readonly></textarea>
-</div> 
+<div id ="printPost">
 </div>
-<footer class="btnMenu">
+</div>
+<div class ="containerFooter">
+<div class="btnMenu">
     <button type="button" class="buttonHome"><img class="imgBtnHome" src="./img/home.png"></button>
     <button type="button" class="buttonSaved"><img class="imgBtnSaved" src="./img/saved.png"></button>
     <button type="button" class="buttonSignOff"><img class="imgBtnSignOut" src="./img/signout.png"></button>
-</footer> `;
+</div>
+<footer>
+ <p> © Copyreit 2022</p>
+<a href="https://github.com/AshleyBustosE">Ashley Bustos</a>
+<a href="https://github.com/PaulaAmigo">Paula Amigo</a>
+<a href="https://github.com/DanielaRamirezCanquiz">Daniela Ramírez</a>
+</footer>
+</div> `;
   container.innerHTML = html;
 
   const btnSignOff = container.querySelector('.buttonSignOff');
@@ -36,11 +43,24 @@ export const post = () => {
   });  
 
   const btnSend = container.querySelector('.buttonPost');
+  const printPost = container.querySelector("#printPost");
+  const drawPost = (post) => {
+     const postHtml = `<p>${post.title}</p>`;
+     const postDiv = document.createElement("div");
+     postDiv.className = "divPost";
+     postDiv.innerHTML = postHtml;
+     printPost.appendChild(postDiv);
+    console.log("Yo estoy dentro de drawPost", post);
+  } 
   btnSend.addEventListener('click', () => {
-    getPost();
+    getPost(drawPost);
     addPost();
     console.log("hola debería funcionar");
   });
-  
+  getPost(drawPost);
   return container;
 };
+
+/*export const getPostsHtml = (posts) => {
+  const postHtml = posts
+}*/
