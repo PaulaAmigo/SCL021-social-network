@@ -75,9 +75,11 @@ export const addPost = async () => {
 //Ver en consola los post de la nube 
 export const getPost = async () => {
   //const post = [];
-  const querySnapshot = await getDocs(collection(db, 'post'));
+  const querySnapshot = await getDocs(query (collection(db, 'post')));
   querySnapshot.forEach((doc) => {
-    console.log(`${doc.id} => ${doc.data()}`);
+    // console.log(`${doc.id} =>  ${doc.data()}`);
+    console.log(doc.id, " => ", doc.data());
+
   });
 };
 
