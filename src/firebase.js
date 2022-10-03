@@ -68,38 +68,30 @@ export const addPost = async () => {
   const docRef = await addDoc(collection(db, "post"), {
     name: nameUser,
     title: post,
-    id: numberUser,
+    number: numberUser,
   });
   //console.log("Document written with ID: ", docRef.id);
 };
 
 
 //Ver en consola los post de la nube 
-export const getPost = async () => {
-  const posts = [];
-  const postDiv = document.getElementById('printPost');
-  const allPosts = query(collection(db, 'post'));
-  const querySnapshot = await getDocs(allPosts);
+// finalPost corresponde a tareaFinal
+export const getPost = async (finalPost) => {
+  // const posts = [];
+  // const postDiv = document.getElementById('printPost');
+  const querySnapshot = await getDocs(query(collection(db, 'post')));
   querySnapshot.forEach((doc) => {
-    //console.log(`${doc.id} => ${doc.data()}`);
-    console.log(doc.id, " => ", doc.data());
-    posts.push({
-      id: doc.id, 
-      ...doc.data()
-    });
-  });
-  return posts; 
+    //const posts = doc.data();
+    //console.log(doc.id, " => ", doc.data());
+    finalPost(doc.data());
+  //   posts.push({
+  //     id: doc.id, 
+  //     ...doc.data()
+  //   });
+  // });
+  // return posts; 
+});
 };
-
-// export const printPost = async () => {
-//   const postDiv = document.getElementById('printPost');
-//   const allPosts = query(collection(db, 'post'));
-//   const querySnapshot = await getDocs(allPosts);
-//   querySnapshot.forEach((doc) => {
-//   // doc.data() is never undefined for query doc snapshots
-//   console.log(doc.id, " => ", doc.data());
-// });
-// };
 
 /*const printPost = async () => {
   const posts = await getPost();

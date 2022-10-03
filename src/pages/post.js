@@ -35,12 +35,21 @@ export const post = () => {
   });  
 
   const btnSend = container.querySelector('.buttonPost');
+  const printPost = container.querySelector("#printPost");
+  const drawPost = (post) => {
+     const postHtml = `<p>${post.title}</p>`;
+     const postDiv = document.createElement("div");
+     postDiv.className = "divPost";
+     postDiv.innerHTML = postHtml;
+     printPost.appendChild(postDiv);
+    console.log("Yo estoy dentro de drawPost", post);
+  } 
   btnSend.addEventListener('click', () => {
-    getPost();
+    getPost(drawPost);
     addPost();
     console.log("hola debería funcionar");
   });
-  
+  getPost(drawPost);
   return container;
 };
 

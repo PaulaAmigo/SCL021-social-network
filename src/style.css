@@ -5,9 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* *{
+ *{
     outline: 1px solid blue !important;
-  } */
+  }
 body {
   background-color: #69c5b8;
   width: 100%;
@@ -212,6 +212,9 @@ padding: 2%;
   align-items: flex-end;
   margin: 0;
   width: 100%;
+}
+.divPost{
+  background-color: yellow;
 }
 
 @media only screen and (min-width: 900px) {
