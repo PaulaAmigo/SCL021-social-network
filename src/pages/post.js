@@ -22,11 +22,19 @@ export const post = () => {
 <div id ="printPost">
 </div>
 </div>
-<footer class="btnMenu">
+<div class ="containerFooter">
+<div class="btnMenu">
     <button type="button" class="buttonHome"><img class="imgBtnHome" src="./img/home.png"></button>
     <button type="button" class="buttonSaved"><img class="imgBtnSaved" src="./img/saved.png"></button>
     <button type="button" class="buttonSignOff"><img class="imgBtnSignOut" src="./img/signout.png"></button>
-</footer> `;
+</div>
+<footer>
+ <p> © Copyreit 2022</p>
+<a href="https://github.com/AshleyBustosE">Ashley Bustos</a>
+<a href="https://github.com/PaulaAmigo">Paula Amigo</a>
+<a href="https://github.com/DanielaRamirezCanquiz">Daniela Ramírez</a>
+</footer>
+</div> `;
   container.innerHTML = html;
 
   const btnSignOff = container.querySelector('.buttonSignOff');
