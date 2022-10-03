@@ -23,9 +23,9 @@ export const post = () => {
 </div>
 </div>
 <footer class="btnMenu">
-    <button type="button" class="buttonSignOff"><img class="imgBtnSignOut" src="./img/signout.jpg"></button>
+    <button type="button" class="buttonHome"><img class="imgBtnHome" src="./img/home.png"></button>
     <button type="button" class="buttonSaved"><img class="imgBtnSaved" src="./img/saved.png"></button>
-    <button type="button" class="buttonSignOff"><img class="imgBtnSignOut" src="./img/signout.jpg"></button>
+    <button type="button" class="buttonSignOff"><img class="imgBtnSignOut" src="./img/signout.png"></button>
 </footer> `;
   container.innerHTML = html;
 

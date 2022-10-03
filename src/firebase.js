@@ -61,7 +61,6 @@ export const signOutGoogle = () => {
 });
 
 };
-
 export const addPost = async () => {
   const post = document.getElementById("inputPost").value;
   const nameUser = document.getElementById("name").value;

@@ -42,9 +42,9 @@ export const login = () => {
   <hr>
   <footer>
   <p> © Copyreit 2022</p>
-  <a href="https://github.com/AshleyBustosE"> Ashley Bustos </a>
-  <a href="https://github.com/PaulaAmigo"> Paula Amigo </a>
-  <a href="https://github.com/DanielaRamirezCanquiz"> Daniela Ramírez </a>
+  <a href="https://github.com/AshleyBustosE">Ashley Bustos</a>
+  <a href="https://github.com/PaulaAmigo">Paula Amigo</a>
+  <a href="https://github.com/DanielaRamirezCanquiz">Daniela Ramírez</a>
   </footer> `;
   container.innerHTML = html;
 
