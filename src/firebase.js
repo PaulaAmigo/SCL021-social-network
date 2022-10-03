@@ -64,22 +64,54 @@ export const signOutGoogle = () => {
 
 export const addPost = async () => {
   const post = document.getElementById("inputPost").value;
+  const nameUser = document.getElementById("name").value;
+  const numberUser = document.getElementById("number").value;
   const docRef = await addDoc(collection(db, "post"), {
-    name: "nameUser",
+    name: nameUser,
     title: post,
-    id: "Japan"
+    id: numberUser,
   });
-//console.log("Document written with ID: ", docRef.id); 
-}; 
+  //console.log("Document written with ID: ", docRef.id);
+};
+
 
 //Ver en consola los post de la nube 
 export const getPost = async () => {
-  //const post = [];
-  const querySnapshot = await getDocs(collection(db, 'post'));
+  const posts = [];
+  const postDiv = document.getElementById('printPost');
+  const allPosts = query(collection(db, 'post'));
+  const querySnapshot = await getDocs(allPosts);
   querySnapshot.forEach((doc) => {
-    console.log(`${doc.id} => ${doc.data()}`);
+    //console.log(`${doc.id} => ${doc.data()}`);
+    console.log(doc.id, " => ", doc.data());
+    posts.push({
+      id: doc.id, 
+      ...doc.data()
+    });
   });
+  return posts; 
 };
+
+// export const printPost = async () => {
+//   const postDiv = document.getElementById('printPost');
+//   const allPosts = query(collection(db, 'post'));
+//   const querySnapshot = await getDocs(allPosts);
+//   querySnapshot.forEach((doc) => {
+//   // doc.data() is never undefined for query doc snapshots
+//   console.log(doc.id, " => ", doc.data());
+// });
+// };
+
+/*const printPost = async () => {
+  const posts = await getPost();
+
+  const wallPost = document.getElementById("wall");
+  wallPost.appendChild(posts);
+};
+printPost(); */
+
+
+
 
 // Ver en el muro los post de la nube
 /*const getCollection = (tareaFinal) => {
