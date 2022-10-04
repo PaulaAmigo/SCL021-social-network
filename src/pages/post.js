@@ -3,13 +3,14 @@ import { signOutGoogle, getPost, addPost } from "../firebase.js";
 export const post = () => {
   const container = document.createElement('div');
   const html = `
-  <div class= "loginView" >
-  <header class="headerPost">
+  <div class= "postView" >
+  <div class="headerPost">
     <div class="containerLogoPost">
       <img class="logo" src="./img/logo-sin-fondo.png" alt="logo"/>
       <h1 class="h1Post">TRUELACHE</h1> 
     </div>
-  </header>
+  </div>
+  <div class = "containerPost">
  <div class = "post"> 
   <input type="text" id="name" class="name" placeholder="Ingresa tu nombre"></input>
     <textarea class="inputPost" id="inputPost" rows="4" cols="30" placeholder = "Escribe aquí tu..."></textarea>
@@ -19,7 +20,8 @@ export const post = () => {
       <button type="button" class="buttonPost"><img class="imgBtnPost" src="./img/send.png"></button>
      </div>
 </div> 
-<div id ="printPost">
+<div id ="printPost" class= "printPost">
+</div>
 </div>
 </div>
 <div class ="containerFooter">
@@ -45,7 +47,17 @@ export const post = () => {
   const btnSend = container.querySelector('.buttonPost');
   const printPost = container.querySelector("#printPost");
   const drawPost = (post) => {
-     const postHtml = `<p>${post.title}</p>`;
+     const postHtml = `
+     <div class ="infoPost">
+        <div class="namePost">
+          <p>${post.name}</p> 
+        </div>
+        <div class="textPost">
+          <p>${post.title}</p>
+          <p>${post.number}</p>
+        </div>
+     </div>
+     `;
      const postDiv = document.createElement("div");
      postDiv.className = "divPost";
      postDiv.innerHTML = postHtml;
@@ -53,6 +65,8 @@ export const post = () => {
     console.log("Yo estoy dentro de drawPost", post);
   } 
   btnSend.addEventListener('click', () => {
+    container.querySelector("#printPost").innerHTML = "";
+    //container.querySelector(".name").innerHTML = "";
     getPost(drawPost);
     addPost();
     console.log("hola debería funcionar");
