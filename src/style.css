@@ -343,6 +343,8 @@ padding: 2%;
   .post{
     display: flex;
     width: 40%;
+    height: 50%;
+    margin-top: 1%;
   }
   .buttonPost{
     width: 30%;
@@ -360,22 +362,15 @@ padding: 2%;
     width: 60%;
     margin-left: 2%;
   }
-
-  /* .containerPost{
+  .infoPost{
     display: flex;
-    flex-flow: column wrap;
-    align-content: flex-end;
-    margin: 2%;
+    
   }
-  .post{
-    display: flex;
-    position: fixed;
+  .textPost, .namePost{
+    font-size: 25px;
   }
-  .printPost{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin-left: 2%;
-  } */
+  .namePost{
+    padding: 1%;
+  }
 }
 
