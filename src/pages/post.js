@@ -65,6 +65,8 @@ export const post = () => {
     console.log("Yo estoy dentro de drawPost", post);
   } 
   btnSend.addEventListener('click', () => {
+    container.querySelector("#printPost").innerHTML = "";
+    //container.querySelector(".name").innerHTML = "";
     getPost(drawPost);
     addPost();
     console.log("hola debería funcionar");
