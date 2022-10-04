@@ -24,19 +24,19 @@ export const post = () => {
 </div>
 </div>
 </div>
-<div class ="containerFooter">
+<nav class ="containerMenu">
 <div class="btnMenu">
     <button type="button" class="buttonHome"><img class="imgBtnHome" src="./img/home.png"></button>
     <button type="button" class="buttonSaved"><img class="imgBtnSaved" src="./img/saved.png"></button>
     <button type="button" class="buttonSignOff"><img class="imgBtnSignOut" src="./img/signout.png"></button>
 </div>
+</nav> 
 <footer>
  <p> © Copyreit 2022</p>
 <a href="https://github.com/AshleyBustosE">Ashley Bustos</a>
 <a href="https://github.com/PaulaAmigo">Paula Amigo</a>
 <a href="https://github.com/DanielaRamirezCanquiz">Daniela Ramírez</a>
-</footer>
-</div> `;
+</footer>`;
   container.innerHTML = html;
 
   const btnSignOff = container.querySelector('.buttonSignOff');

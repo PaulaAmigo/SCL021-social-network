@@ -113,7 +113,7 @@ footer{
   text-align: center;
   font-size: 15px;
   color: black;
-  font-family: "Josefin Slab", serif;
+  font-family: "Abril Fatface", cursive;
   margin-top: 1%;
  
 }
@@ -123,7 +123,7 @@ bottom: 0;
 }
 .headerPost{
   font-family: "Josefin Slab", serif;
-  font-size: 10px;
+  font-size: 16px;
   text-align: center;
   align-items: center;
   display: flex;
@@ -150,6 +150,8 @@ bottom: 0;
   border: 1px solid #000000;
   border-radius: 30px;
   padding: 5%;
+  width: 90%;
+  margin-left: 5%;
 
 }
 .inputPost,
@@ -158,8 +160,9 @@ bottom: 0;
 border: 1px solid #000000;
 border-radius: 5px;
 font-family: "Josefin Slab", serif;
-font-size: 20px;
+font-size: 25px;
 padding: 2%;
+margin-top: 1%;
   
 }
 .btnSend{
@@ -189,8 +192,9 @@ padding: 2%;
   width: 35%;
   height: 25%;
   justify-items: center;
-  background-color: #a1e2faaf;
+  background-color:  #3EA1C1;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
   }
 .imgBtnSignOut{
   width: 27%;
@@ -205,6 +209,19 @@ padding: 2%;
   height:  30%;
   padding: 3%;
 }
+.containerMenu{
+  display: flex;
+  align-items: stretch;
+  border: 0;
+  box-sizing: border-box;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 0;
+  order: 2;
+  padding: 0;
+  position: relative;
+  vertical-align: baseline;
+}
 .btnMenu{
   display: flex;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
@@ -216,6 +233,7 @@ padding: 2%;
   align-items: flex-end;
   margin: 0;
   width: 100%;
+  bottom: 0;
 }
 .divPost{
   background-color: #ffc845;
@@ -224,6 +242,9 @@ padding: 2%;
   border-radius: 30px;
   border: 1px solid #000000;
   margin-top: 2%;
+  width: 90%;
+  margin-left: 5%;
+
 }
 .infoPost{
   background-color: white;
@@ -317,12 +338,12 @@ padding: 2%;
     justify-content: space-around;
     font-size: 14px;
     color: black;
-    font-family: "Josefin Slab", serif;
+    font-family: "Abril Fatface", cursive;
   }
   .h1Post{
     font-size: 60px;
   }
-  .containerFooter{
+  .containerMenu{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -345,10 +366,21 @@ padding: 2%;
     width: 40%;
     height: 50%;
     margin-top: 1%;
+    padding: 3%;
+    
   }
+  .inputPost{
+    margin-top: 2%;
+  }
+  
+  .number{
+    margin-top: 2%;
+  }
+  
   .buttonPost{
     width: 30%;
     height: 70%;
+    margin-top: 1%;
   }
   .imgBtnPost{
     width: 35%;
@@ -371,6 +403,7 @@ padding: 2%;
   }
   .namePost{
     padding: 1%;
+   
   }
 }
 
