@@ -5,9 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
- *{
+ /* *{
     outline: 1px solid blue !important;
-  }
+  } */
 body {
   background-color: #69c5b8;
   width: 100%;
@@ -140,7 +140,7 @@ bottom: 0;
 .h1Post{
   font-family: "Abril Fatface", cursive;
   align-self: center;
-  
+
 }
 .post{
   font-family: "Josefin Slab", serif;
@@ -189,7 +189,7 @@ padding: 2%;
   width: 35%;
   height: 25%;
   justify-items: center;
-  background: #3EA1C1;
+  background-color: #a1e2faaf;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 .imgBtnSignOut{
@@ -218,7 +218,39 @@ padding: 2%;
   width: 100%;
 }
 .divPost{
-  background-color: yellow;
+  background-color: #ffc845;
+  font-family: "Josefin Slab", serif;
+  padding: 2%;
+  border-radius: 30px;
+  border: 1px solid #000000;
+  margin-top: 2%;
+}
+.infoPost{
+  background-color: white;
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid #000000;
+  font-family: "Josefin Slab", serif;
+  display: flex;
+  flex-direction: row;
+
+}
+.namePost{
+  font-size: 16px;
+  width: 30%;
+  height: 30%;
+  padding: 1%;
+  margin-left: 3%;
+  margin-top: 2%;
+  background-color: #a1e2faaf;
+  text-align: center;
+  border-radius: 50%;
+}
+.textPost{
+  font-size: 14px;
+  flex-direction: column;
+  width: 70%;
+  padding: 1%;
 }
 
 @media only screen and (min-width: 900px) {
@@ -287,9 +319,63 @@ padding: 2%;
     color: black;
     font-family: "Josefin Slab", serif;
   }
+  .h1Post{
+    font-size: 60px;
+  }
+  .containerFooter{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
   .btnMenu{
-   display: none;
+   /* display: none; */
+   display: flex;
+   width: 30%;
+  }
+  .containerLogoPost{
+    display: flex;
+    width: 100%;
+  }
+  .containerPost{
+    display: flex;
+    margin: 2%;
+  }
+  .post{
+    display: flex;
+    width: 40%;
+  }
+  .buttonPost{
+    width: 30%;
+    height: 70%;
+  }
+  .imgBtnPost{
+    width: 35%;
+    height:  100%;
+    padding: 3%;
+    margin-left: 15%;
+  }
+  .printPost{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin-left: 2%;
   }
 
+  /* .containerPost{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-end;
+    margin: 2%;
+  }
+  .post{
+    display: flex;
+    position: fixed;
+  }
+  .printPost{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 2%;
+  } */
 }
 
