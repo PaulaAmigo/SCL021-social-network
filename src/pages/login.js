@@ -1,4 +1,4 @@
-import { redirectGoogle, loginWithGoogle } from '../firebase.js';
+import { loginWithGoogle } from '../firebase.js';
 
 export const login = () => {
   const container = document.createElement('div');
@@ -11,7 +11,7 @@ export const login = () => {
   <div class="welcome">
   <h2>Te damos la bienvenida a</h2>
   <h1>TRUELACHE</h1> 
-  <h2>Dónde puedes hacer tu trueque y cambalache</h2>
+  <h2>Dónde puedes hacer trueque y cambalache</h2>
   </div>
   </header>
 <main class="login">
@@ -39,12 +39,11 @@ export const login = () => {
 </main>
 
   </div> 
-  <hr>
   <footer>
-  <p> © 2022</p>
-  <a href="https://github.com/AshleyBustosE"> Ashley Bustos </a>
-  <a href="https://github.com/PaulaAmigo"> Paula Amigo </a>
-  <a href="https://github.com/DanielaRamirezCanquiz"> Daniela Ramírez </a>
+  <p> © Copyreit 2022</p>
+  <a href="https://github.com/AshleyBustosE">Ashley Bustos</a>
+  <a href="https://github.com/PaulaAmigo">Paula Amigo</a>
+  <a href="https://github.com/DanielaRamirezCanquiz">Daniela Ramírez</a>
   </footer> `;
   container.innerHTML = html;
 
@@ -54,8 +53,9 @@ export const login = () => {
 
   // LOGIN WITH GOOGLE
   const btnGoogle = container.querySelector('.googleButton');
-  btnGoogle.addEventListener('click', redirectGoogle);
-  // console.log(btnGoogle);
-
+  btnGoogle.addEventListener('click', () => {
+    loginWithGoogle();
+    // console.log(btnGoogle);
+  });
   return container;
 };

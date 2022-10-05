@@ -4,10 +4,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} 
-/* *{
+}
+ /* *{
     outline: 1px solid blue !important;
-  }  */
+  } */
 body {
   background-color: #69c5b8;
   width: 100%;
@@ -44,7 +44,7 @@ h1 {
   background-color: #fec834;
   border-color: #fec834;
   border-radius: 30px;
-  box-shadow: inset 0px 0px 0px 0px #dcecfb; /*despues comentar esta linea */
+  box-shadow: inset 0px 0px 0px 0px #dcecfb;
   width: 94%;
   display: flex;
   flex-direction: column;
@@ -107,14 +107,174 @@ h1 {
   background-color: #ffffffaf;
 }
 footer{
-  width: 98%;
+  width: 100%;
   display:flex;
   justify-content: space-between;
-  font-size: 14px;
-  color: #4d4f53;
-  font-family: "Josefin Slab", serif;
-  margin-top: 1%;        
+  text-align: center;
+  font-size: 15px;
+  color: black;
+  font-family: "Abril Fatface", cursive;
+  background-color: whitesmoke;
+ 
 }
+.containerFooter{
+position: fixed;
+bottom: 0;
+}
+.headerPost{
+  font-family: "Josefin Slab", serif;
+  font-size: 16px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  color: #313233;
+}
+.containerLogoPost {
+  display: flex;
+  align-content: center;
+}
+.containerLogoPost img {
+  width: 30%;
+}
+.h1Post{
+  font-family: "Abril Fatface", cursive;
+  align-self: center;
+
+}
+.post{
+  font-family: "Josefin Slab", serif;
+  display: flex;
+  flex-direction: column;
+  background: #FEC834;
+  border: 1px solid #000000;
+  border-radius: 30px;
+  padding: 5%;
+  width: 90%;
+  margin-left: 5%;
+
+}
+.inputPost,
+.name,
+.number{
+border: 1px solid #000000;
+border-radius: 5px;
+font-family: "Josefin Slab", serif;
+font-size: 20px;
+padding: 2%;
+margin-top: 1%;
+cursor: auto;
+  
+}
+.btnSend{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2%;
+  cursor: pointer;
+
+}
+.buttonPost{
+  width: 30%;
+  height: 30%;
+  justify-items: center;
+  background: #3EA1C1;
+  border-radius: 50%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 1%;
+  cursor: pointer;
+}
+.imgBtnPost{
+  width: 25%;
+  height:  25%;
+  padding: 2%;
+
+}
+.buttonSignOff,
+.buttonHome, 
+.buttonSaved{
+  width: 35%;
+  height: 25%;
+  justify-items: center;
+  background-color:  #3EA1C1;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  
+  }
+.imgBtnSignOut{
+  width: 27.5%;
+  height:  27.5%;
+}
+.imgBtnSaved{
+  width: 30%;
+  height:  30%;
+}
+.imgBtnHome{
+  width: 30%;
+  height:  30%;
+  padding: 3%;
+}
+.btnMenuHeader{
+  display: none;
+}
+
+.btnMenu{
+  display: flex;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-color: solid #000000;
+  border: 2px;
+  font-size: 1.5rem;
+  /* margin-top: 5%; */
+  flex-direction: row;
+  align-items: flex-end;
+  margin: 0;
+  width: 100%;
+  bottom: 0;
+}
+.divPost{
+  background-color: #ffc845;
+  font-family: "Josefin Slab", serif;
+  padding: 2%;
+  border-radius: 30px;
+  border: 1px solid #000000;
+  margin-top: 2%;
+  width: 90%;
+  margin-left: 5%;
+
+}
+.printPost{
+  margin-top: 2%;
+  width: 100%;
+  height: 250px;
+  overflow-y: scroll;
+}
+.infoPost{
+  background-color: white;
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid #000000;
+  font-family: "Josefin Slab", serif;
+  display: flex;
+  flex-direction: row;
+
+}
+.namePost{
+  font-size: 18px;
+  width: 30%;
+  height: 30%;
+  padding: 1%;
+  margin-left: 3%;
+  margin-top: 2%;
+  background-color: #a1e2faaf;
+  text-align: center;
+  border-radius: 50%;
+}
+.textPost{
+  font-size: 18px;
+  flex-direction: column;
+  width: 70%;
+  padding: 1%;
+}
+
 @media only screen and (min-width: 900px) {
   header {
     width: 50%;
@@ -123,6 +283,7 @@ footer{
     justify-content: center;
     align-items: center;
   }
+    
   .data {
     width: 100%;
     height: 100%;
@@ -177,9 +338,95 @@ footer{
     display:flex;
     justify-content: space-around;
     font-size: 14px;
-    color: #4d4f53;
-    font-family: "Josefin Slab", serif;
-    margin-top: 1%;          
+    color: black;
+    font-family: "Abril Fatface", cursive;
+    background-color: whitesmoke;
+  }
+  .h1Post{
+    font-size: 60px;
+  }
+  .containerLogoPost{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+  .btnMenuHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 20%;
+    
+  }
+
+  .printPost{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 252px;
+    overflow-y: scroll;
+    margin: 0;
+  }
+
+  .btnMenu{
+   display: none;
+
+  }
+  .containerFooter{
+    width: 100%;
+  }
+  .containerLogoPost{
+    display: flex;
+    width: 100%;
+  }
+  .containerPost{
+    display: flex;
+    padding: 1%;
+   
+  }
+  .post{
+    display: flex;
+    width: 30%;
+    height: 40%;
+    padding: 2%;
+    
+  }
+  .inputPost{
+    margin-top: 2%;
   }
   
+  .number{
+    margin-top: 2%;
+  }
+  
+  .buttonPost{
+    width: 30%;
+    height: 70%;
+    margin-top: 1%;
+  }
+  .imgBtnPost{
+    width: 35%;
+    height:  100%;
+    padding: 3%;
+    margin-left: 15%;
+  }
+  .imgBtnSignOut{
+    width: 20%;
+    height:  10%;
+  }
+  .infoPost{
+    display: flex;
+    
+  }
+  .textPost, .namePost{
+    font-size: 25px;
+  }
+  .namePost{
+    padding: 1%;
+   
+  }
 }
+
