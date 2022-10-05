@@ -244,7 +244,7 @@ cursor: auto;
 .printPost{
   margin-top: 2%;
   width: 100%;
-  height: 250px;
+  height: 415px;
   overflow-y: scroll;
 }
 .infoPost{
@@ -366,7 +366,7 @@ cursor: auto;
     display: flex;
     flex-direction: column;
     width: 70%;
-    height: 252px;
+    height: 320px;
     overflow-y: scroll;
     margin: 0;
   }
