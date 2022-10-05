@@ -8,6 +8,11 @@ export const post = () => {
     <div class="containerLogoPost">
       <img class="logo" src="./img/logo-sin-fondo.png" alt="logo"/>
       <h1 class="h1Post">TRUELACHE</h1> 
+      <div class ="btnMenuHeader">
+    <button type="button" class="buttonHome"><img class="imgBtnHome" src="./img/home.png"></button>
+    <button type="button" class="buttonSaved"><img class="imgBtnSaved" src="./img/saved.png"></button>
+    <button type="button" class="buttonSignOff"><img class="imgBtnSignOut" src="./img/signout.png"></button>
+    </div>
     </div>
   </div>
   <div class = "containerPost">
@@ -24,19 +29,19 @@ export const post = () => {
 </div>
 </div>
 </div>
-<nav class ="containerMenu">
-<div class="btnMenu">
+<div class ="containerFooter">
+<div class ="btnMenu">
     <button type="button" class="buttonHome"><img class="imgBtnHome" src="./img/home.png"></button>
     <button type="button" class="buttonSaved"><img class="imgBtnSaved" src="./img/saved.png"></button>
     <button type="button" class="buttonSignOff"><img class="imgBtnSignOut" src="./img/signout.png"></button>
 </div>
-</nav> 
 <footer>
  <p> © Copyreit 2022</p>
 <a href="https://github.com/AshleyBustosE">Ashley Bustos</a>
 <a href="https://github.com/PaulaAmigo">Paula Amigo</a>
 <a href="https://github.com/DanielaRamirezCanquiz">Daniela Ramírez</a>
-</footer>`;
+</footer>
+</div> `;
   container.innerHTML = html;
 
   const btnSignOff = container.querySelector('.buttonSignOff');
