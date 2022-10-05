@@ -18,14 +18,18 @@ Es por eso que, este proyecto facilita la adquisición de nuevos productos por m
 - La definición final del producto se logró a través de la iteración de feedbacks entre compañeros y/o coaches, logrando de esta forma una mejor usabilidad y experiencia de usuario.
 
 ### 1.2 Prototipo baja fidelidad
-[![Prototipo](./src/img/imgReadme/prototipobfTruelache.png)]
 
-### 1.3 Prototipo Alta Fidelidad
+![Prototipo](./src/img/imgReadme/prototipobfTruelache.png)
+
+### 1.3 Paleta de colores
+
 ![Prototipo](./src/img/imgReadme/paletacolores.jpg) 
+
+### 1.4 Prototipo Alta Fidelidad
+
 ![Prototipo](./src/img/imgReadme/prototipologin.jpg)
 ![Prototipo](./src/img/imgReadme/prototipopost.jpg)
-
-### 1.4 Producto Final
+### 1.5 Producto Final
 Vista Responsive Movil
 
 ![Prototipo](./src/img/imgReadme/truelacheMobileFirst1.jpg)
